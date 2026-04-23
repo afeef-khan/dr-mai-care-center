@@ -9,9 +9,7 @@
     <!-- link for fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
 
     <!-- Fontawesome Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -23,85 +21,201 @@
 </head>
 
 <body>
-    <nav class="nav-bar">
-        <div class="container">
-            <div class="nav-bar-wrapper">
-                <div class="nav-logo">Dr. Mia's</div>
-                <div class="nav-list-wrapper">
-                    <li class="nav-list"><a href="#">Home</a></li>
-                    <li class="nav-list"><a href="#">About</a></li>
-                    <li class="nav-list"><a href="#">Services</a></li>
-                    <li class="nav-list"><a href="#">Why Us</a></li>
-                </div>
-                <div class="nav-button-wrapper">
-                    <div class="btn-secondary">
-                        <a href="">Contact Us</a>
+    <div class="container">
+        <header class="navbar">
+            <div class="nav-link">
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Programs</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
 
-                    </div>
-                    <div class="btn-primary">
-                        <a href="">Book an Appointment</a>
-                    </div>
-                    <!-- <button class="btn-secondary">Contact Us</button> -->
-                    <!-- <button class="btn-primary">Book an Appointment</button> -->
-                </div>
+            <a href="#" class="logo">
+                <svg class="logo-icon" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 3C15 3 7 8.5 7 16a8 8 0 0016 0C23 8.5 15 3 15 3Z" fill="#036A3A" opacity="0.18" />
+                    <path d="M15 3C15 3 7 8.5 7 16a8 8 0 0016 0C23 8.5 15 3 15 3Z" stroke="#036A3A"
+                        stroke-width="1.6" />
+                    <path d="M15 9v10" stroke="#036A3A" stroke-width="1.6" stroke-linecap="round" />
+                    <path d="M11 14.5c1.6-1.2 3.2-0.8 4 1.5" stroke="#036A3A" stroke-width="1.3"
+                        stroke-linecap="round" />
+                    <path d="M19 14.5c-1.6-1.2-3.2-0.8-4 1.5" stroke="#036A3A" stroke-width="1.3"
+                        stroke-linecap="round" />
+                </svg>
+                <span class="logo-text">Dr. Mia's</span>
+            </a>
+
+            <div class="nav-actions">
+                <a href="#" class="btn btn-outline">
+                    Contact Us
+                    <span class="arrow-circle">
+                        <svg viewBox="0 0 14 14">
+                            <path d="M2 7h10M8 3l4 4-4 4" />
+                        </svg>
+                    </span>
+                </a>
+                <a href="#" class="btn btn-dark">
+                    Book a Session
+                    <span class="arrow-circle btn-icon">
+                        <svg viewBox="0 0 14 14">
+                            <path d="M2 7h10M8 3l4 4-4 4" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </header>
+
+        <!-- Mobile menu — inside container, below navbar -->
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Our Services</a>
+            <a href="#">Programs</a>
+            <a href="#">Blog</a>
+            <div class="mobile-menu-actions">
+                <a href="#" class="btn btn-outline">Contact Us</a>
+                <a href="#" class="btn btn-dark">Book a Session</a>
             </div>
         </div>
-    </nav>
 
-    <section class="hero-section">
-        <div class="container">
-            <div class="hero-wrapper">
-                <div class="hero-content-wrapper">
-                    <div class="hero-badge">
-                        <p>Root Cause Treatment</p>
-                    </div>
-                    <div class="hero-heading">
-                        <h1>Discover Peace, Balance and Inner Strength</h1>
-                    </div>
-                    <div class="hero-sub-text-wrapper">
-                        <div class="hero-sub-text">
-                            <i class="fa-solid fa-head-side-mask"></i>
-                            <p>Therapist Approved Healing Practices</p>
-                        </div>
-                        <div class="hero-sub-text">
-                            <i class="fa-solid fa-shield-halved"></i>
-                            <p>No Synthetic Products Added</p>
-                        </div>
-                        <div class="hero-sub-text">
-                            <i class="fa-solid fa-circle-nodes"></i>
-                            <p>Free Consultation With Every Booking</p>
-                        </div>
-                    </div>
-                    <div class="hero-buttons">
-                        <div class="btn-primary">
-                            <a href="">Book an Appointment</a>
-                        </div>
-                        <div class="btn-secondary">
-                            <a href="">Explore Services</a>
-                        </div>
-                    </div>
+        <!-- HERO -->
+        <section class="hero">
+
+            <div class="hero-left">
+
+                <div class="rating-badge">
+                    <span class="badge-dot">
+                        <svg viewBox="0 0 11 11">
+                            <path d="M2 5.5l2.5 2.5L9 3" />
+                        </svg>
+                    </span>
+                    4.5 Average Rating &bull; <strong>453 Reviews</strong>
                 </div>
-                <div class="hero-image-wrapper">
-                    <div class="hero-image">
-                        <img src="https://images.pexels.com/photos/6129205/pexels-photo-6129205.jpeg" alt="hero-image">
-                    </div>
-                    <div class="hero-float-wrapper">
-                        <div class="hero-float-1">
-                            <i class="fa-solid fa-check"></i>
-                            <p>Instant Consultation</p>
-                        </div>
-                        <div class="hero-float-2">
-                            <i class="fa-solid fa-check"></i>
-                            <p>Natural Treatment</p>
-                        </div>
-                        <div class="hero-float-3">
-                            <p>Daily Health Report For You</p>
-                        </div>
-                    </div>
+
+                <h1 class="hero-title">
+                    Discover Peace,<br>
+                    Balance, and Inner<br>
+                    Strength
+                </h1>
+
+                <ul class="feature-list">
+                    <li>
+                        <span class="feature-icon">🌿</span>
+                        Therapist-Approved Healing Practices
+                    </li>
+                    <li>
+                        <span class="feature-icon">🌱</span>
+                        No Synthetic Products or Additives
+                    </li>
+                    <li>
+                        <span class="feature-icon">📋</span>
+                        Free Consultation with Every Booking
+                    </li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="#" class="btn btn-dark">
+                        Book an Appointment
+                        <span class="arrow-circle btn-icon">
+                            <svg viewBox="0 0 14 14">
+                                <path d="M2 7h10M8 3l4 4-4 4" />
+                            </svg>
+                        </span>
+                    </a>
+                    <a href="#" class="btn btn-outline">
+                        Explore Service
+                        <span class="arrow-circle">
+                            <svg viewBox="0 0 14 14">
+                                <path d="M2 7h10M8 3l4 4-4 4" />
+                            </svg>
+                        </span>
+                    </a>
+
                 </div>
             </div>
-        </div>
-    </section>
+
+            <div class="hero-right">
+
+                <!-- <div class="card-members">
+                    <div class="card-members-label">Daily health report<br>for you team</div>
+                    <div class="avatars">
+                        <div class="avatar avatar-a"></div>
+                        <div class="avatar avatar-b"></div>
+                        <div class="avatar avatar-c"></div>
+                    </div>
+                    <div class="members-count">30+ <span>Members</span></div>
+                </div> -->
+
+                <div class="photo-main">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&q=82&fit=crop"
+                        alt="Wellness person" />
+                </div>
+
+                <div class="card-pill pill-1">
+                    <span class="pill-check">
+                        <svg viewBox="0 0 10 10">
+                            <path d="M2 5l2.5 2.5L8 3" />
+                        </svg>
+                    </span>
+                    Free Wellness Consultation
+                </div>
+
+                <div class="card-pill pill-2">
+                    <span class="pill-check">
+                        <svg viewBox="0 0 10 10">
+                            <path d="M2 5l2.5 2.5L8 3" />
+                        </svg>
+                    </span>
+                    Book a Session Instantly
+                </div>
+
+                <div class="card-health">
+                    <div class="health-label">Check Your Health Score</div>
+                    <div class="health-score-row">
+                        <div>
+                            <div class="health-number">82</div>
+                            <div class="health-denom">/100</div>
+                        </div>
+                        <div class="ring-wrap">
+                            <svg viewBox="0 0 42 42">
+                                <circle cx="21" cy="21" r="16" stroke="rgba(255,255,255,0.22)" stroke-width="4"
+                                    fill="none" />
+                                <circle cx="21" cy="21" r="16" stroke="white" stroke-width="4" fill="none"
+                                    stroke-dasharray="100.5" stroke-dashoffset="18" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-thumb">
+                    <img src="https://images.unsplash.com/photo-1518310952931-b1de897abd40?w=280&q=82&fit=crop"
+                        alt="Meditation" />
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+        });
+    </script>
+
+
 </body>
 
 </html>
