@@ -18,6 +18,7 @@
 
     <!-- Main style -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaquery.css">
 </head>
 
 <body>
@@ -48,22 +49,42 @@
             </a>
 
             <div class="nav-actions">
-                <a href="#" class="btn btn-outline">
+                <button href="#" class="button">
                     Contact Us
-                    <span class="arrow-circle">
-                        <svg viewBox="0 0 14 14">
-                            <path d="M2 7h10M8 3l4 4-4 4" />
+                    <span class="button__icon-wrapper">
+                        <svg viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="button__icon-svg"
+                            width="10">
+                            <path
+                                d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                                fill="currentColor"></path>
+                        </svg>
+
+                        <svg viewBox="0 0 14 15" fill="none" width="10" xmlns="http://www.w3.org/2000/svg"
+                            class="button__icon-svg button__icon-svg--copy">
+                            <path
+                                d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                                fill="currentColor"></path>
                         </svg>
                     </span>
-                </a>
-                <a href="#" class="btn btn-dark">
+                </button>
+
+                <button class="cta-btn">
                     Book a Session
-                    <span class="arrow-circle btn-icon">
-                        <svg viewBox="0 0 14 14">
-                            <path d="M2 7h10M8 3l4 4-4 4" />
+                    <span class="cta-btn__icon-box">
+                        <svg viewBox="0 0 14 15" class="cta-btn__icon" width="10">
+                            <path
+                                d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                                fill="currentColor" />
+                        </svg>
+
+                        <svg viewBox="0 0 14 15" class="cta-btn__icon cta-btn__icon--alt" width="10">
+                            <path
+                                d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                                fill="currentColor" />
                         </svg>
                     </span>
-                </a>
+                </button>
+
             </div>
 
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">
