@@ -438,7 +438,8 @@ a {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    font-size: 15px;
+    font-size: 14px;
+    color: var(--primary);
 }
 
 .arrow-circle {
@@ -670,11 +671,9 @@ a {
     transform: rotate(-90deg);
 }
 
-/* 
-
 /* ── STATS STRIP ── */
 .stats-strip {
-    margin: 60px 0 60px;
+    margin: 0 0 60px;
     background: var(--dark);
     border-radius: 24px;
     padding: 36px 48px;
@@ -725,6 +724,7 @@ a {
     display: flex;
     align-items: center;
     gap: 64px;
+    margin-bottom: 40px;
 }
 
 .about-image-wrap {
@@ -800,7 +800,12 @@ a {
     border-radius: 50%;
 }
 
-.about-content h2 {
+.about-content h2,
+.section-title,
+.why-content h2,
+.how-section h2,
+.doctors-section h2,
+.appointment-left h2 {
     font-size: clamp(1.8rem, 3.5vw, 2.4rem);
     font-weight: 700;
     color: var(--dark);
@@ -844,7 +849,8 @@ a {
 
 /* ── SERVICES ── */
 .services {
-    padding: 80px 0 96px;
+    padding: 60px 0 96px;
+    margin-bottom: 40px;
 }
 
 /* Header row */
@@ -882,11 +888,10 @@ a {
 }
 
 .section-title {
-    font-size: clamp(30px, 3.5vw, 44px);
-    font-weight: 900;
-    line-height: 1.1;
-    letter-spacing: -1px;
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    font-weight: 700;
     color: var(--dark);
+    line-height: 1.2;
     margin-bottom: 14px;
 }
 
@@ -911,6 +916,13 @@ a {
     position: relative;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 0 20px 1px var(--border);
+}
+
+.card:hover{
+    box-shadow: 0 12px 36px rgba(3, 106, 58, 0.25);
+    scale: 1.01;
+    transition: 0.1s ease-in;
 }
 
 /* Card 1 — full photo with overlay */
@@ -967,9 +979,14 @@ a {
     border: 1px solid var(--border);
 }
 
-.card-content h3 {
+.how-step h3,
+.why-item h4,
+.doctor-card h3,
+.card-content h3,
+.card-green h3,
+.card-photo-overlay h3 {
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 700;
     color: var(--dark);
     margin-bottom: 10px;
     line-height: 1.2;
@@ -1353,12 +1370,13 @@ a {
 
 /* ── HOW IT WORKS ── */
 .how-section {
-    padding: 80px 0;
+    padding: 60px 0 32px;
+    margin-bottom: 40px;
 }
 
 .how-section .section-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .how-section .section-header h2 {
@@ -1439,7 +1457,8 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 28px;
+    font-size: 24px;
+    color: var(--primary);
     margin-bottom: 20px;
 }
 
@@ -1472,7 +1491,8 @@ a {
 
 /* ── DOCTORS ── */
 .doctors-section {
-    padding: 80px 0;
+    padding: 60px 0 96px;
+    margin-bottom: 40px;
 }
 
 .doctors-section .section-header {
@@ -1486,8 +1506,9 @@ a {
     font-size: clamp(1.8rem, 3.5vw, 2.4rem);
     font-weight: 700;
     color: var(--dark);
-    max-width: 380px;
+    max-width: 400px;
     line-height: 1.2;
+    margin-bottom: 0;
 }
 
 .doctors-grid {
@@ -1559,7 +1580,8 @@ a {
 
 /* ── WHY CHOOSE US ── */
 .why-section {
-    padding: 80px 0;
+    padding: 60px 0 96px;
+    margin-bottom: 40px;
 }
 
 .why-inner {
@@ -1605,7 +1627,8 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 18px;
+    color: var(--primary);
     flex-shrink: 0;
 }
 
@@ -1678,7 +1701,8 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 16px;
+    color: #68cf96;
 }
 
 .why-floating-text {
@@ -1696,7 +1720,7 @@ a {
 
 /* ── APPOINTMENT ── */
 .appointment-section {
-    padding: 80px 0;
+    padding: 60px 0 40px;
 }
 
 .appointment-inner {
@@ -1746,7 +1770,8 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 16px;
+    color: #68cf96;
     flex-shrink: 0;
 }
 
@@ -1853,14 +1878,14 @@ footer {
     color: rgba(255, 255, 255, .75);
     border-radius: 28px 28px 0 0;
     margin-top: 32px;
-    padding: 64px 48px 0;
+    padding: 52px 48px;
 }
 
 .footer-top {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1.5fr;
     gap: 48px;
-    margin-bottom: 48px;
+    margin-bottom: 40px;
 }
 
 .footer-brand .logo {
@@ -1975,7 +2000,7 @@ footer {
 
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, .08);
-    padding: 24px 0;
+    padding: 12px 0 0 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
